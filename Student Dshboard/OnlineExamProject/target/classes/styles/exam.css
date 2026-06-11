@@ -1,0 +1,153 @@
+/* =========================
+   ROOT
+========================= */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Arial";
+    -fx-font-size: 14px;
+    -fx-background-color: #F4F6F9;
+}
+
+/* =========================
+   MAIN ROOT
+========================= */
+.mainFxmlClass {
+    -fx-background-color: #F4F6F9;
+}
+
+/* =========================
+   HEADER
+========================= */
+.exam-header {
+    -fx-background-color: #1E293B;
+    -fx-padding: 16 24 16 24;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.exam-title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.exam-progress {
+    -fx-text-fill: #D6E4F3;
+    -fx-font-size: 13px;
+}
+
+.exam-header > .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.exam-timer {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Consolas", monospace;
+
+    -fx-padding: 6 16 6 16;
+}
+
+/* =========================
+   QUESTION CARD
+========================= */
+.question-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 12;
+
+    -fx-padding: 24;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(0,0,0,0.08),
+        10,
+        0,
+        0,
+        3
+    );
+}
+
+/* Question Number */
+#lblQuestionNumber {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6B7280;
+}
+
+/* Question Text */
+#lblQuestionText {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+/* =========================
+   RADIO BUTTONS
+========================= */
+.radio-button {
+    -fx-font-size: 14px;
+    -fx-padding: 10 12 10 12;
+
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.radio-button:hover {
+    -fx-background-color: #E8F1FA;
+}
+
+.radio-button .radio {
+    -fx-background-color: white;
+    -fx-border-color: #1A4F8B;
+    -fx-border-radius: 50%;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #1A4F8B;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 10 20 10 20;
+
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+/* Previous Button */
+#btnPrevious {
+    -fx-background-color: #E8F1FA;
+    -fx-text-fill: #1A4F8B;
+}
+
+#btnPrevious:hover {
+    -fx-background-color: #D6E6F7;
+}
+
+/* Next Button */
+#btnNext {
+    -fx-background-color: #1A4F8B;
+    -fx-text-fill: white;
+}
+
+#btnNext:hover {
+    -fx-background-color: #2E6FB5;
+}
+
+/* Submit Button */
+#btnSubmit {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+}
+
+#btnSubmit:hover {
+    -fx-opacity: 0.9;
+}

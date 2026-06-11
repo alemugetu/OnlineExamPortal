@@ -1,0 +1,101 @@
+.root{
+    -fx-font-family:"Segoe UI";
+    -fx-background-color:#f5f7fb;
+}
+
+.page-container{
+    -fx-padding:20;
+    -fx-background-color:white;
+    -fx-background-radius:12;
+}
+
+.page-title{
+    -fx-font-size:24px;
+    -fx-font-weight:bold;
+    -fx-text-fill:#1e293b;
+}
+
+.page-subtitle{
+    -fx-font-size:13px;
+    -fx-text-fill:#64748b;
+}
+
+.button{
+    -fx-background-color:#2563eb;
+    -fx-text-fill:white;
+    -fx-background-radius:8;
+    -fx-padding:10 18;
+    -fx-font-weight:bold;
+}
+
+.button:hover{
+    -fx-background-color:#1d4ed8;
+    -fx-cursor:hand;
+}
+
+.text-field,
+.combo-box,
+.date-picker{
+    -fx-background-radius:8;
+    -fx-border-radius:8;
+    -fx-border-color:#dbe2ea;
+    -fx-padding:8;
+    -fx-background-color:white;
+}
+
+.modern-table{
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#e2e8f0;
+}
+
+.modern-table .column-header{
+    -fx-background-color:#eff6ff;
+    -fx-padding:12;
+}
+
+.modern-table .table-row-cell{
+    -fx-cell-size:45;
+}
+
+.modern-table .table-row-cell:selected{
+    -fx-background-color:#dbeafe;
+}
+
+.tab-pane .tab-header-area .tab{
+    -fx-background-radius:8 8 0 0;
+    -fx-padding:10 20;
+}
+
+.tab-pane .tab:selected{
+    -fx-background-color:#2563eb;
+}
+
+.tab-pane .tab:selected .tab-label{
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+.menu-button{
+    -fx-background-color:#2563eb;
+    -fx-text-fill:white;
+    -fx-background-radius:8;
+}
+
+/* Profile Menu Button (The Student Name) */
+.profile-menu {
+    -fx-background-color: #F1F5F9;
+    -fx-background-radius: 20;
+    -fx-text-fill: #334155;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15;
+    -fx-cursor: hand;
+}
+
+.profile-menu:hover {
+    -fx-background-color: #E2E8F0;
+}
+
+.profile-menu .label {
+    -fx-text-fill: #334155;
+}

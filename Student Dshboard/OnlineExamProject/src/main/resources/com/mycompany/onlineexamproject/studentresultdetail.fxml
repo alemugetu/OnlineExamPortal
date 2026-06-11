@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0"
+            prefWidth="800.0"
+            stylesheets="@/styles/studentresult.css"
+            styleClass="root-container"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.onlineexamproject.StudentresultdetailController">
+
+    <!-- TOP -->
+    <top>
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              styleClass="navbar">
+
+            <padding>
+                <Insets top="15" right="30" bottom="15" left="30"/>
+            </padding>
+
+            <Button text="Back"
+                    styleClass="nav-button-back"
+                    onAction="#handleBack"/>
+
+            <Label text="Result Detail"
+                   styleClass="page-title"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+
+        <ScrollPane fitToWidth="true"
+                    styleClass="result-scroll">
+
+            <content>
+
+                <VBox spacing="25"
+                      alignment="TOP_CENTER"
+                      styleClass="main-content">
+
+                    <padding>
+                        <Insets top="20"
+                                right="30"
+                                bottom="30"
+                                left="30"/>
+                    </padding>
+
+                    <Label fx:id="lblExamTitle"
+                           styleClass="title-large"
+                           text="Exam Title"/>
+
+                    <!-- SUMMARY CARD -->
+                    <VBox spacing="15"
+                          styleClass="course-card">
+
+                        <Label text="Student ID:"/>
+                        <Label fx:id="lblStudentId"/>
+
+                        <Label text="Score:"/>
+                        <Label fx:id="lblScore"/>
+
+                        <Label text="Status:"/>
+                        <Label fx:id="lblStatus"/>
+
+                    </VBox>
+
+                    <!-- QUESTIONS -->
+                    <VBox fx:id="questionContainer"
+                          spacing="20"/>
+
+                </VBox>
+
+            </content>
+
+        </ScrollPane>
+
+    </center>
+
+</BorderPane>

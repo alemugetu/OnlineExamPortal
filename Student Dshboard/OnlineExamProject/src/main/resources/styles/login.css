@@ -1,0 +1,62 @@
+/* Background */
+.mainFxmlClass {
+    -fx-background-color: #1e3c72;
+}
+
+/* Card container */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    /* Soft shadow for a modern look */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 20, 0, 0, 10);
+}
+
+/* Title */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e3c72;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Inputs */
+.text-field, .password-field {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: transparent;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #2a5298;
+    -fx-border-width: 2;
+}
+
+/* Button */
+.button {
+    -fx-background-color: #2a5298;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #3e66ab;
+    -fx-scale-x: 1.02; /* Subtle pop effect */
+    -fx-scale-y: 1.02;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.98;
+}
+
+/* Error message */
+#err {
+    -fx-text-fill: #d32f2f;
+    -fx-font-weight: bold;
+}

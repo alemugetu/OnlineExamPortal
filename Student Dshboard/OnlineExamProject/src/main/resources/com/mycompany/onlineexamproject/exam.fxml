@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.onlineexamproject.ExamController">
+    <stylesheets>
+        <URL value="@/styles/exam.css"/>
+    </stylesheets>
+
+
+    <!-- TOP -->
+    <top>
+        <HBox spacing="16" styleClass="exam-header">
+
+            <padding>
+                <Insets top="12" right="20" bottom="12" left="20"/>
+            </padding>
+
+            <VBox spacing="4">
+                <Label fx:id="lblExamTitle" text="Exam Title" styleClass="exam-title"/>
+                <Label fx:id="lblProgress" text="Progress" styleClass="exam-progress"/>
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Label text="Time:"/>
+            <Label fx:id="lblTimer" text="00:00" styleClass="exam-timer"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+        <VBox spacing="20">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- QUESTION CARD -->
+            <VBox spacing="10" styleClass="question-card">
+
+                <Label fx:id="lblQuestionNumber" text="QUESTION 1"/>
+                <Label fx:id="lblQuestionText" wrapText="true" text="Question here"/>
+
+                <!-- FIX: ToggleGroup MUST be here (NOT inside layout) -->
+                <fx:define>
+                   <ToggleGroup fx:id="tgOptions"/>
+                 </fx:define>
+
+                <VBox spacing="8">
+
+                    <RadioButton fx:id="optA"
+                                 text="A"
+                                 toggleGroup="$tgOptions"/>
+
+                    <RadioButton fx:id="optB"
+                                 text="B"
+                                 toggleGroup="$tgOptions"/>
+
+                    <RadioButton fx:id="optC"
+                                 text="C"
+                                 toggleGroup="$tgOptions"/>
+
+                    <RadioButton fx:id="optD"
+                                 text="D"
+                                 toggleGroup="$tgOptions"/>
+
+                </VBox>
+            </VBox>
+
+            <!-- BUTTONS -->
+            <HBox spacing="10">
+
+                <Button fx:id="btnPrevious"
+                        text="Previous"
+                        onAction="#previousQuestion"/>
+
+                <Button fx:id="btnNext"
+                        text="Next"
+                        onAction="#nextQuestion"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Button fx:id="btnSubmit"
+                        text="Submit"
+                        onAction="#submitExam"/>
+
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

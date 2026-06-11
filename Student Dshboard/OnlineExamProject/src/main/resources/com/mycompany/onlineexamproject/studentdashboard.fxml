@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="1100.0" styleClass="root-container" stylesheets="@/styles/studentdashboard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.onlineexamproject.StudentdashboardController">
+
+    <center>
+        <VBox spacing="0" styleClass="vbox-container">
+            <!-- Header Bar -->
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" styleClass="header-bar">
+                <padding><Insets left="30" right="30" /></padding>
+                <children>
+                    <ImageView fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <image>
+                            <Image url="@images/uog.jpg" />
+                        </image>
+                    </ImageView>
+                    <Label styleClass="logo-text" text="UoG Portal" />
+
+                    <Region HBox.hgrow="ALWAYS" />
+
+                    <HBox alignment="CENTER" spacing="10">
+                        <children>
+                            
+                            <MenuButton fx:id="studentMenu" styleClass="profile-menu" >
+                                <items>
+                                    <MenuItem text="Group Members" onAction="#groupMember" />
+                                    <SeparatorMenuItem />
+                                    <MenuItem styleClass="logout-item" text="Logout" onAction="#handleLogout" fx:id="logoutButton" />
+                                </items>
+                            </MenuButton>
+                        </children>
+                    </HBox>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="860.0" styleClass="navbar">
+               <children>
+                      <Button maxWidth="Infinity" styleClass="nav-button" text="Available Courses" onAction="#handleAvailableCourses">
+                          <graphic>
+                        <Region styleClass="icon, icon-course" />
+                     </graphic>
+                      </Button>
+                      <Button maxWidth="Infinity" styleClass="nav-button" text="My Results" onAction="#handleMyResults">
+                          <graphic>
+                        <Region styleClass="icon, icon-result" />
+                     </graphic>
+                      </Button>
+               </children>
+            </HBox>
+
+            <!-- Main Content Area -->
+            <ScrollPane fitToWidth="true" styleClass="content-scrollpane" VBox.vgrow="ALWAYS">
+                <content>
+                    <VBox spacing="30" styleClass="main-content">
+                        <padding><Insets bottom="30" left="40" right="40" top="30" /></padding>
+                        <children>
+                            
+                            <!-- Dynamic courses will be injected here -->
+                            <FlowPane fx:id="courseContainer" hgap="25" prefWrapLength="800" vgap="25" />
+                        </children>
+                    </VBox>
+                </content>
+            </ScrollPane>
+        </VBox>
+    </center>
+</BorderPane>

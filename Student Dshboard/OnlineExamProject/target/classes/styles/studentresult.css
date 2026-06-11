@@ -1,0 +1,101 @@
+/* Color Palette & Root */
+.root-container {
+    -fx-background-color: #F8FAFC;
+}
+
+
+/* Navbar (The Blue Strip) */
+.navbar {
+    -fx-background-color: #1E293B;
+    -fx-padding: 8 40;
+    -fx-spacing: 15;
+}
+
+
+.nav-button-back {
+    -fx-font-size: 14px;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+    -fx-text-fill: white; 
+    -fx-background-color: #34495E;
+}
+
+.nav-button-back:hover {
+    -fx-border-color: #4299E1;
+    -fx-border-width: 0 0 0 4; 
+    -fx-text-fill: white;
+}
+
+.page-title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+
+/* Main Content & ScrollPane */
+.content-scrollpane, .result-scroll {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.content-scrollpane .viewport, .result-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.main-content {
+    -fx-background-color: transparent;
+}
+
+/* Result Card (Mimicking your Course Card) */
+.course-card {
+    -fx-background-color: white;
+    -fx-padding: 25;
+    -fx-background-radius: 15;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+    -fx-spacing: 12;
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
+}
+
+/* Hover Effect for List View (if resultContainer items are course-cards) */
+.course-card:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-border-color: #2563EB;
+    -fx-border-radius: 15;
+}
+
+/* Detail Page Specifics */
+.title-large {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F172A;
+}
+
+
+.course-card .label {
+    -fx-text-fill: #475569;
+    -fx-font-size: 14px;
+}
+
+.course-card .card-course-title{
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F172A;
+}
+
+
+#lblScore {
+    -fx-text-fill: black; /* Professional Green */
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+/* Questions Section Container */
+#questionContainer {
+    -fx-padding: 10 0 0 0;
+}
+
